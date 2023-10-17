@@ -14,7 +14,7 @@ export const Navigation = () => {
                 <div className="d-flex gap-4 links">
                     <HashLink smooth to={"/#top"}>Home</HashLink>
                     <HashLink smooth to={"/#about"}>About</HashLink>
-                    <HashLink smooth to={"/#portfolio"}>Projects</HashLink>
+                    <HashLink smooth to={"/#projects"}>Projects</HashLink>
                     <HashLink smooth to={"/#contact"}>Contact</HashLink>
                 </div>
                 <div className="d-flex gap-4 align-items-center social">
