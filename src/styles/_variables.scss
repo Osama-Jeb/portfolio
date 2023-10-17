@@ -2,34 +2,24 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 $red: #e21919;
-$blue: #1431d44f;
+$blue: #041125;
 $orange: #db850d;
 $gray : #171c22;
+
+$main : #caf300;
+$comp : #00caf3;
 
 $custom-colors: (
   "red": $red,
   "blue": $blue,
   "orange": $orange,
   "gray" : $gray,
+  "main" : $main,
+  "comp" : $comp
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-// $spacer: 1rem;
-
-// $custom-spacers: (
-//   0: 0,
-//   1: $spacer * 1,
-//   2: $spacer * 2,
-//   3: $spacer * 3,
-//   4: $spacer * 4,
-//   5: $spacer * 5,
-//   6: $spacer * 6,
-//   7: $spacer * 7,
-//   8: $spacer * 8
-// );
-
-// $spacers: map-merge($spacers, $custom-spacers);
 
 $custom-position: (
   0: 0,

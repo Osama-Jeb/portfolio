@@ -7,7 +7,7 @@ import { Navigation } from "./layouts/Navigation";
 export const App = () => {
   return (
     <>
-      <div className="bg-gray text-light">
+      <div className="bg-blue text-light">
         <Navigation />
         <Routes>
           <Route path="*" element={<Error />} />

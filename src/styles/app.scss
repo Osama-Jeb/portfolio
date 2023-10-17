@@ -4,7 +4,40 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 
-*{
-    padding: 0 !important;
-    margin: 0 !important;
+/* Add a class to blur the main content */
+.blur {
+    filter: blur(5px);
+    /* Adjust the blur amount as needed */
+}
+
+.containerme {
+    border-radius: 20px;
+    width: 69%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "montserrat";
+    transition: all 0.5s;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: $main;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    // outline: 1px solid slategrey;
 }

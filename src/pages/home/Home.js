@@ -1,10 +1,15 @@
 import React from "react";
 import "./home.scss";
+import { About } from "./components/about/About";
+import { Hero } from "./components/hero/Hero";
 
 export const Home = () => {
   return (
     <>
-      <h1 className="">Hello to HOME</h1>
+      <div className="containerme">
+        <Hero />
+        <About />
+      </div>
     </>
   );
 };
