@@ -1,7 +1,7 @@
 export default function About() {
     return (
-        <section className="min-h-[60vh] bg-amber-800 flex items-center justify-center">
-            <div className="bg-purple-800 w-full px-16">
+        <section className="min-h-[60vh] flex items-center justify-center">
+            <div className="w-full px-16">
                 <p className="text-3xl">About</p>
 
                 <div className="flex items-center gap-2">

@@ -4,7 +4,7 @@ export default function Hero() {
 
     const langs = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'php']
 
-    const skills = ['ReactJS', 'React Native', 'Tailwind', 'Laravel', 'Firebase'];
+    const skills = ['React', 'React Native', 'Tailwind', 'Laravel', 'Inertia'];
 
     const traite = ['hardWorker', 'quickLearner', 'problemSolver'];
 
@@ -16,15 +16,18 @@ export default function Hero() {
     }
 
     return (
-        <section className="flex items-center justify-center min-h-[80vh] bg-blue-500">
-            <div className="flex items-center justify-around w-full bg-green-400">
+        <section className="flex items-center justify-center min-h-[80vh]">
+            <div className="flex items-center justify-around w-full">
                 {/* Intro */}
-                <div>
+                <div className="text-center">
+                    <h1 className="text-7xl font-bold">Hey, There</h1>
+                    <br />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam.</p>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
+                
                 {/* Coder */}
-                <div className="text-start">
+                {/* <div className="text-start">
                     <div className="px-4 border-t-2 border-l border-r border-gray-600 bg-[#0d1117] text-white lg:px-8 py-5"
                         style={{ borderTopColor: "#FFA54F" }}>
                         <div className="flex space-x-2">
@@ -148,7 +151,7 @@ export default function Hero() {
                             </div>
                         </code>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )
