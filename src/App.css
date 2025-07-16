@@ -1,0 +1,19 @@
+* {
+    font-family: monospace;
+}
+
+.title {
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    height: 60%;
+    width: 85%;
+    background-color: #bd7c40;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    right: -15px;
+    z-index: -20;
+}

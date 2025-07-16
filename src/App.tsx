@@ -10,7 +10,12 @@ import Trusted from './sections/trusted'
 function App() {
 
   return (
-    <>
+    <div 
+    style={{
+      backgroundColor: "#050505",
+      color: "#F1F1F1"
+    }}
+    >
       <Navbar />
       <Hero />
       <About />
@@ -18,7 +23,7 @@ function App() {
       <Projects />
       <Trusted />
       <Contact />
-    </>
+    </div>
   )
 }
 
