@@ -2,7 +2,7 @@ export default function Hero() {
 
 
     return (
-        <section className="flex items-center justify-center min-h-[80vh]">
+        <section className="min-h-[90vh]">
             <div className="flex items-center justify-around w-full">
                 {/* Intro */}
                 <div className="text-center">

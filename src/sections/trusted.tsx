@@ -2,7 +2,7 @@ import Title from "../components/Title";
 
 export default function Trusted() {
     return (
-        <section className="min-h-[50vh] flex items-center justify-center">
+        <section>
             <div className="w-full px-16">
                 <Title title="Trusted By" />
                 

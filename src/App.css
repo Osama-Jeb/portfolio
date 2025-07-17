@@ -1,5 +1,13 @@
 * {
     font-family: monospace;
+    transition: all 0.5s;
+}
+
+section{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -10,7 +18,7 @@
     content: "";
     height: 60%;
     width: 85%;
-    background-color: #bd7c40;
+    background-color: #bdb340;
     display: block;
     position: absolute;
     bottom: -5px;
