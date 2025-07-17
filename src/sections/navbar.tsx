@@ -1,15 +1,5 @@
 import logo from "../assets/images/favicon-_1_.svg";
 
-interface Theme {
-    backgroundColor: string,
-    color: string,
-}
-interface NavbarProps {
-    theme: Theme,
-    setTheme: (theme: Theme) => void,
-}
-
-
 export default function Navbar({ theme, setTheme }: NavbarProps) {
 
     const changeTheme = () => {
@@ -30,10 +20,10 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <p>About</p>
-                    <p>Skills</p>
-                    <p>Projects</p>
-                    <p>Contact</p>
+                    <p>linkedin</p>
+                    <p>github</p>
+                    <p>email</p>
+                    <p>cv</p>
                     <button
                     className="px-3 py-1 rounded bg-red-400"
                         onClick={changeTheme}

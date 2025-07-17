@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-import About from './sections/about'
+// import About from './sections/about'
 import Contact from './sections/contact'
 import Hero from './sections/hero'
 import Navbar from './sections/navbar'
@@ -27,7 +27,7 @@ function App() {
     >
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
-      <About />
+      {/* <About /> */}
       <Skills />
       <Projects />
       <Trusted />

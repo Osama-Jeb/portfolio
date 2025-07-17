@@ -13,7 +13,7 @@ export default function Skills() {
     return (
         <section>
             <div className="w-full px-16">
-                <Title title="Skills" />
+                <Title title="Techno-Stack" />
                 <div className="flex items-center justify-center flex-col">
                     <div className="flex flex-col gap-6">
                         {categories.map((category, index) => (
