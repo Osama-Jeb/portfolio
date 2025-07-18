@@ -14,7 +14,7 @@ import inertia from "../assets/images/skills/inertia.svg";
 import git from "../assets/images/skills/Git.svg";
 import github from "../assets/images/skills/GitHub.svg";
 
-export const languages = [
+export const languages: Skill[] = [
     {
         name: 'HTML5',
         image: html,
@@ -31,12 +31,12 @@ export const languages = [
         bg: 'border-[#cc669980]'
     },
     {
-        name: 'JavaScript',
+        name: 'JAVASCRIPT',
         image: javascript,
         bg: 'border-[#f7e02580]'
     },
     {
-        name: 'TypeScript',
+        name: 'TYPESCRIPT',
         image: typescript,
         bg: 'border-[#3178c680]'
     },
@@ -47,19 +47,19 @@ export const languages = [
     },
 ];
 
-export const frameworks = [
+export const frameworks: Skill[] = [
     {
-        name: 'React',
+        name: 'REACT',
         image: react,
         bg: 'border-[#00d8ff80]'
     },
     {
-        name: 'React Native',
+        name: 'REACT NATIVE',
         image: expo,
         bg: 'border-[#b5b4b480]'
     },
     {
-        name: 'Laravel',
+        name: 'LARAVEL',
         image: laravel,
         bg: 'border-[#ff2d2080]'
     },
@@ -70,19 +70,19 @@ export const frameworks = [
     },
 ];
 
-export const others = [
+export const others: Skill[] = [
     {
-        name: 'Git',
+        name: 'GIT',
         image: git,
         bg: 'border-[#f0503380]'
     },
     {
-        name: 'GitHub',
+        name: 'GITHUB',
         image: github,
         bg: 'border-[#282828]'
     },
     {
-        name: 'Tailwind',
+        name: 'TAILWIND',
         image: tailwind,
         bg: 'border-[#30b8c780]'
     },

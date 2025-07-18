@@ -11,6 +11,12 @@ type NavbarProps = {
     setTheme: (theme: Theme) => void,
 }
 
+type Skill = {
+    name: string,
+    image: string,
+    bg: string,
+}
+
 type Tech = {
     name: string,
     color: string,
@@ -25,5 +31,5 @@ type Project = {
     techs: Tech[],
     client?: string,
     clientWebsite?: string,
-    preview: string
+    preview: string,
 }
