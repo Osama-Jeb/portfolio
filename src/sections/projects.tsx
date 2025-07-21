@@ -8,8 +8,8 @@ export default function Projects() {
         <section>
             <div className="w-full px-16">
                 <Title title="Projects" />
-                <div className="flex items-center justify-center flex-col gap-2">
-                    {/* <h1 className="text-2xl font-bold mb-2">Profession Projects</h1> */}
+                <div className="flex items-center justify-center flex-col gap-5 mt-5">
+                    {/* <h1 className="text-2xl font-bold my-3">Professional Projects</h1> */}
                     {
                         proProjects.map((project, ind) => (
                             <ProjectCard project={project} index={ind} />
