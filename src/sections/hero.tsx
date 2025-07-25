@@ -8,11 +8,15 @@ export default function Hero() {
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Hi 👋, I'm Oussama Jebrane</h1>
                     <br />
-                    <h1 className="text-7xl font-bold text-alpha">FULLSTACK WEB DEVELOPER</h1>
+                    <div className="flex gap-1">
+                        <h1 className="text-7xl font-bold text-alpha">FULLSTACK WEB DEVELOPER
+                        </h1>
+                        <div className="w-[4px] h-[50px] bg-alpha animate-bounce"></div>
+                    </div>
                     <br />
                     <h3 className="text-2xl font-bold">I conceive and build intuitive websites and mobile applications.</h3>
                 </div>
-                
+
 
             </div>
         </section>

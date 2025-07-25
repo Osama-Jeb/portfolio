@@ -7,13 +7,12 @@ type Theme = {
     color: string,
 }
 type NavbarProps = {
-    theme: Theme,
-    setTheme: (theme: Theme) => void,
+    changeTheme: () => void,
 }
 
 type Skill = {
     name: string,
-    image: string,
+    svg: string,
     bg: string,
 }
 

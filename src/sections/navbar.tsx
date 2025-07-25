@@ -1,14 +1,9 @@
-export default function Navbar({ theme, setTheme }: NavbarProps) {
+export default function Navbar({ changeTheme }: NavbarProps) {
 
-    const changeTheme = () => {
-        setTheme({
-            backgroundColor: theme.backgroundColor == "#050505" ? "#E1E1E1" : "#050505",
-            color: theme.color == "#E1E1E1" ? "#050505" : "#E1E1E1"
-        })
-    }
+
 
     return (
-        <nav className=" p-4 fixed top-0 w-full z-20">
+        <nav className=" p-4 sticky top-0 right-0 w-full z-20 backdrop-blur-md bg-alpha/10">
             <div className="flex items-center justify-between gap-2 ">
                 <div className="flex items-center gap-2">
 
@@ -61,7 +56,7 @@ l-108 0 -36 -75 c-67 -143 -188 -232 -347 -256 -187 -29 -373 70 -459 243 -18
                     <p>cv</p>
                     <button
                         className="px-3 py-1 rounded bg-red-400"
-                        onClick={changeTheme}
+                        onClick={() => { changeTheme() }}
                     >
                         Change Theme
                     </button>

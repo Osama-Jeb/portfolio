@@ -60,9 +60,9 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">Email</p>
-                                    <a href="mailto:your.email@example.com"
+                                    <a href="mailto:oussamajebrane98@gmail.com"
                                         className="text-white hover:text-alpha transition-colors">
-                                        your.email@example.com
+                                        oussamajebrane98@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -75,10 +75,10 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">LinkedIn</p>
-                                    <a href="https://linkedin.com/in/yourprofile"
+                                    <a href="https://www.linkedin.com/in/oussama-jebrane"
                                         target="_blank" rel="noopener noreferrer"
                                         className="text-white hover:text-alpha transition-colors">
-                                        linkedin.com/in/yourprofile
+                                        linkedin.com/in/oussama-jebrane
                                     </a>
                                 </div>
                             </div>
@@ -91,10 +91,10 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">GitHub</p>
-                                    <a href="https://github.com/yourusername"
+                                    <a href="https://github.com/Osama-Jeb"
                                         target="_blank" rel="noopener noreferrer"
                                         className="text-white hover:text-alpha transition-colors">
-                                        github.com/yourusername
+                                        github.com/Osama-Jeb
                                     </a>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@ export default function Contact() {
                                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl 
                                                  text-white placeholder-gray-400 focus:outline-none focus:border-alpha 
                                                  focus:ring-1 focus:ring-alpha transition-colors"
-                                        placeholder="your.email@example.com"
+                                        placeholder="oussamajebrane98@gmail.com"
                                     />
                                 </div>
                             </div>

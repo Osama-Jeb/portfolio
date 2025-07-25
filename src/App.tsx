@@ -8,16 +8,18 @@ import Skills from './sections/skills'
 import Trusted from './sections/trusted'
 import ProjectDetails from './components/ProjectDetails'
 
-interface Theme {
-  backgroundColor: string,
-  color: string,
-}
-
 function App() {
   const [theme, setTheme] = useState<Theme>({
     backgroundColor: "#050505",
     color: "#E1E1E1"
-  })
+  });
+
+  const changeTheme = () => {
+    setTheme({
+      backgroundColor: theme.backgroundColor == "#050505" ? "#000000" : "#050505",
+      color: theme.color == "#E1E1E1" ? "#FFFFFF" : "#E1E1E1"
+    })
+  }
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
@@ -29,15 +31,17 @@ function App() {
     setSelectedProject(null)
   }
 
+
+
   return (
     <div
       style={{
         backgroundColor: theme.backgroundColor,
         color: theme.color
       }}
-    // className={theme.backgroundColor == "#050505" ? "" : "invert"}
+      className={theme.backgroundColor == "#050505" ? "" : "invert"}
     >
-      <Navbar theme={theme} setTheme={setTheme} />
+      <Navbar changeTheme={changeTheme} />
 
       {selectedProject ? (
         <ProjectDetails

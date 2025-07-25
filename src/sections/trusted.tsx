@@ -17,7 +17,7 @@ export default function Trusted() {
                                 <img src={tru.image}
                                     className="w-[150px] h-[140px] object-cover"
                                     alt="trusted_logo" />
-                                <p>{tru.name}</p>
+                                <p className="text-xl">{tru.name}</p>
                             </a>
                         ))
                     }

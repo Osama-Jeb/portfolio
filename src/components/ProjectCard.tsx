@@ -21,10 +21,9 @@ export default function ProjectCard({ project, index, onProjectSelect, type }: P
                 type == "pro" && (
                     <div className="lg:w-1/2 relative overflow-hidden rounded-2xl">
                         <img
-                            className="w-full h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="transition-transform duration-700 group-hover:scale-105"
                             src={project.preview}
                             alt={project.name}
-                            loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
@@ -91,7 +90,7 @@ export default function ProjectCard({ project, index, onProjectSelect, type }: P
                                 href={project.website}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 border-2 border-alpha text-alpha 
+                                className="inline-flex items-center gap-2 border-2 border-alpha  
                                          px-4 py-2 rounded-xl font-medium hover:bg-alpha hover:text-black 
                                          transition-all duration-300 hover:scale-105 hover:shadow-lg 
                                          hover:shadow-alpha/25 group/link"
@@ -110,10 +109,9 @@ export default function ProjectCard({ project, index, onProjectSelect, type }: P
                     {onProjectSelect && (
                         <button
                             onClick={() => onProjectSelect(project)}
-                            className="w-full mt-4 bg-gradient-to-r from-alpha/20 to-alpha/10 
-                                     text-alpha border border-alpha/30 px-4 py-3 rounded-xl 
-                                     font-medium hover:from-alpha/30 hover:to-alpha/20 
-                                     hover:border-alpha/50 transition-all duration-300 
+                            className="w-full mt-4 
+                                      border bg-gradient-to-r px-4 py-3 rounded-xl 
+                                     font-medium from-alpha/30 to-alpha/20 border-alpha/50 transition-all duration-300 
                                      hover:shadow-lg hover:shadow-alpha/10"
                         >
                             View Project Details
