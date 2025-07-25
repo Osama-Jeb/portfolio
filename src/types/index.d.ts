@@ -6,6 +6,7 @@ type Theme = {
     backgroundColor: string,
     color: string,
 }
+
 type NavbarProps = {
     changeTheme: () => void,
 }

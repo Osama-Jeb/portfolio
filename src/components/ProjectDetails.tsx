@@ -1,26 +1,27 @@
 
+import { Link } from 'react-router-dom'
+
 interface ProjectDetailsProps {
     project: Project
-    onBack: () => void
 }
 
-export default function ProjectDetails({ project, onBack }: ProjectDetailsProps) {
+export default function ProjectDetails({ project }: ProjectDetailsProps) {
     return (
         <div className="min-h-screen py-16 lg:py-24">
             <div className="px-4 sm:px-6 lg:px-8">
                 {/* Back Button */}
-                <button
-                    onClick={onBack}
+                <Link
+                    to="/"
                     className="mb-8 inline-flex items-center gap-2 text-alpha hover:text-alpha/80 
-                             transition-colors group"
+                            transition-colors group"
                 >
-                    <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1" 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                              d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
                     Back to Projects
-                </button>
+                </Link>
 
                 {/* Project Header */}
                 <div className="mb-12">
@@ -29,8 +30,8 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
-                            <img 
-                                src={project.preview} 
+                            <img
+                                src={project.preview}
                                 alt={project.name}
                                 className="w-full h-64 lg:h-80 object-cover rounded-2xl"
                             />
@@ -39,7 +40,7 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
                             <p className="text-xl text-gray-300 leading-relaxed">
                                 {project.detailedDesc || project.desc}
                             </p>
-                            
+
                             {project.timeline && (
                                 <div>
                                     <h3 className="text-lg font-semibold text-alpha mb-2">Timeline</h3>
@@ -47,125 +48,182 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
                                 </div>
                             )}
 
-                            <div className="flex flex-wrap gap-2">
-                                {project.techs.map((tech, index) => (
-                                    <span 
-                                        key={index}
-                                        className="bg-gradient-to-r from-gray-800 to-gray-700 
-                                                 text-gray-200 px-3 py-1.5 rounded-full text-sm font-medium
-                                                 border border-gray-600/50"
-                                    >
-                                        {tech.name}
-                                    </span>
-                                ))}
-                            </div>
+                            {project.client && (
+                                <div>
+                                    <h3 className="text-lg font-semibold text-alpha mb-2">Client</h3>
+                                    {project.clientWebsite ? (
+                                        <a
+                                            href={project.clientWebsite}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-300 hover:text-alpha transition-colors"
+                                        >
+                                            {project.client} →
+                                        </a>
+                                    ) : (
+                                        <p className="text-gray-300">{project.client}</p>
+                                    )}
+                                </div>
+                            )}
 
+                            {/* Links */}
                             <div className="flex gap-4">
+                                {project.website && (
+                                    <a
+                                        href={project.website}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-6 py-3 bg-alpha text-black rounded-lg hover:bg-alpha/80 transition-colors font-medium"
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
                                 {project.github && (
                                     <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 bg-white text-black 
-                                                 px-4 py-2 rounded-xl font-medium hover:bg-gray-200 
-                                                 transition-all duration-300"
+                                        className="px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:border-alpha hover:text-alpha transition-colors font-medium"
                                     >
                                         GitHub
                                     </a>
                                 )}
-                                <a
-                                    href={project.website}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 border-2 border-alpha 
-                                             text-alpha px-4 py-2 rounded-xl font-medium 
-                                             hover:bg-alpha hover:text-black transition-all duration-300"
-                                >
-                                    Live Demo
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Project Details Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {project.challenges && (
-                        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-                            <h3 className="text-2xl font-bold text-alpha mb-4">Challenges</h3>
-                            <ul className="space-y-3">
-                                {project.challenges.map((challenge, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-alpha rounded-full mt-2 flex-shrink-0" />
-                                        <span className="text-gray-300">{challenge}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
-                    {project.solutions && (
-                        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-                            <h3 className="text-2xl font-bold text-alpha mb-4">Solutions</h3>
-                            <ul className="space-y-3">
-                                {project.solutions.map((solution, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-alpha rounded-full mt-2 flex-shrink-0" />
-                                        <span className="text-gray-300">{solution}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
-                    {project.keyFeatures && (
-                        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-                            <h3 className="text-2xl font-bold text-alpha mb-4">Key Features</h3>
-                            <ul className="space-y-3">
-                                {project.keyFeatures.map((feature, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-alpha rounded-full mt-2 flex-shrink-0" />
-                                        <span className="text-gray-300">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
-                    {project.lessonsLearned && (
-                        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-                            <h3 className="text-2xl font-bold text-alpha mb-4">Lessons Learned</h3>
-                            <ul className="space-y-3">
-                                {project.lessonsLearned.map((lesson, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-alpha rounded-full mt-2 flex-shrink-0" />
-                                        <span className="text-gray-300">{lesson}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
+                {/* Tech Stack */}
+                <div className="mb-12">
+                    <h2 className="text-2xl font-bold text-alpha mb-6">Technologies Used</h2>
+                    <div className="flex flex-wrap gap-3">
+                        {project.techs.map((tech, index) => (
+                            <span
+                                key={index}
+                                className={`px-4 py-2 rounded-lg text-sm font-medium bg-white/10 
+                                          transition-transform hover:scale-105`}
+                            >
+                                {tech.name}
+                            </span>
+                        ))}
+                    </div>
                 </div>
 
+                {/* Key Features */}
+                {project.keyFeatures && (
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
+                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                        <h2 className="text-2xl font-bold text-alpha mb-6">Key Features</h2>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {project.keyFeatures.map((feature, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="text-alpha mt-1">•</span>
+                                    <span className="text-gray-300">{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {/* Challenges & Solutions */}
+                {(project.challenges || project.solutions) && (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                        {project.challenges && (
+                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 
+                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
+                                <h2 className="text-2xl font-bold text-alpha mb-6">Challenges</h2>
+                                <ul className="space-y-3">
+                                    {project.challenges.map((challenge, index) => (
+                                        <li key={index} className="flex items-start gap-3">
+                                            <span className="text-red-400 mt-1">⚠</span>
+                                            <span className="text-gray-300">{challenge}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+
+                        {project.solutions && (
+                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 
+                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
+                                <h2 className="text-2xl font-bold text-alpha mb-6">Solutions</h2>
+                                <ul className="space-y-3">
+                                    {project.solutions.map((solution, index) => (
+                                        <li key={index} className="flex items-start gap-3">
+                                            <span className="text-green-400 mt-1">✓</span>
+                                            <span className="text-gray-300">{solution}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* Lessons Learned */}
+                {project.lessonsLearned && (
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
+                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                        <h2 className="text-2xl font-bold text-alpha mb-6">Lessons Learned</h2>
+                        <ul className="space-y-3">
+                            {project.lessonsLearned.map((lesson, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="text-blue-400 mt-1">💡</span>
+                                    <span className="text-gray-300">{lesson}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {/* Future Improvements */}
                 {project.futureImprovements && (
-                    <div className="mt-8 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                  backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-                        <h3 className="text-2xl font-bold text-alpha mb-4">Future Improvements</h3>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
+                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                        <h2 className="text-2xl font-bold text-alpha mb-6">Future Improvements</h2>
+                        <ul className="space-y-3">
                             {project.futureImprovements.map((improvement, index) => (
                                 <li key={index} className="flex items-start gap-3">
-                                    <div className="w-2 h-2 bg-alpha rounded-full mt-2 flex-shrink-0" />
+                                    <span className="text-purple-400 mt-1">🚀</span>
                                     <span className="text-gray-300">{improvement}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 )}
+
+                {/* Additional Images */}
+                {project.additionalImages && project.additionalImages.length > 0 && (
+                    <div className="mb-12">
+                        <h2 className="text-2xl font-bold text-alpha mb-6">Gallery</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {project.additionalImages.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt={`${project.name} screenshot ${index + 1}`}
+                                    className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Back to Projects Button */}
+                <div className="text-center">
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-alpha text-black rounded-lg hover:bg-alpha/80 transition-colors font-medium"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to All Projects
+                    </Link>
+                </div>
             </div>
         </div>
     )
 }
+

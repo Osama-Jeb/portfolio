@@ -1,11 +1,8 @@
 import ProjectCard from "../components/ProjectCard"
 import Title from "../components/Title"
 import { persoProjects, proProjects } from "../constants/projects"
-interface ProjectsProps {
-    onProjectSelect?: (project: Project) => void
-}
 
-export default function Projects({ onProjectSelect }: ProjectsProps) {
+export default function Projects() {
     return (
         <section id="projects" className="min-h-screen py-16 lg:py-24">
             <div className="px-4 sm:px-6 lg:px-8">
@@ -22,7 +19,6 @@ export default function Projects({ onProjectSelect }: ProjectsProps) {
                                 key={project.id}
                                 project={project}
                                 index={ind}
-                                onProjectSelect={onProjectSelect}
                                 type="pro"
                             />
                         ))}
@@ -39,7 +35,6 @@ export default function Projects({ onProjectSelect }: ProjectsProps) {
                                     key={project.id}
                                     project={project}
                                     index={ind + proProjects.length}
-                                    onProjectSelect={onProjectSelect}
                                     type="perso"
                                 />
                             ))}
