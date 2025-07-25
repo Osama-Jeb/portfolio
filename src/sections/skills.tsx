@@ -12,7 +12,7 @@ export default function Skills() {
 
 
     return (
-        <section>
+        <section id="skills">
             <div className="w-full px-16">
                 <Title title="Techno-Stack" />
                 <div className="flex items-center justify-center flex-col">

@@ -2,13 +2,13 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
 
     const changeTheme = () => {
         setTheme({
-            backgroundColor: theme.backgroundColor == "#050505" ? "" : "#050505",
-            color: theme.color == "#F1F1F1" ? "" : "#F1F1F1"
+            backgroundColor: theme.backgroundColor == "#050505" ? "#E1E1E1" : "#050505",
+            color: theme.color == "#E1E1E1" ? "#050505" : "#E1E1E1"
         })
     }
 
     return (
-        <nav className=" p-4 fixed top-0 w-full">
+        <nav className=" p-4 fixed top-0 w-full z-20">
             <div className="flex items-center justify-between gap-2 ">
                 <div className="flex items-center gap-2">
 

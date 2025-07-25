@@ -8,7 +8,7 @@ export default function Trusted() {
             <div className="w-full px-16">
                 <Title title="Trusted By" />
 
-                <div className="flex items-center justify-center gap-4 mt-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 mx-auto max-w-2xl">
                     {
                         trusted.map((tru, ind) => (
                             <a key={ind} href={tru.website} target="_blank"
