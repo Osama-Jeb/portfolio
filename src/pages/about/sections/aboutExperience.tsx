@@ -1,38 +1,8 @@
 import Title from "../../../components/Title";
+import { experience } from "../../../constants/aboutInfo";
 
 export default function AboutExperience() {
-    const experience = [
-        {
-            role: "Full Stack Developer",
-            company: "LionsGeek Association",
-            period: "2023 - Present",
-            achievements: [
-                "Developed comprehensive management system using Laravel and FullCalendar",
-                "Implemented real-time reservation system for equipment management",
-                "Improved operational efficiency by 40% through automated workflows"
-            ]
-        },
-        {
-            role: "Mobile App Developer",
-            company: "Casa Memoire",
-            period: "2023",
-            achievements: [
-                "Built React Native mobile app showcasing Casablanca's history",
-                "Integrated GPS-based location services for interactive tours",
-                "Delivered cross-platform solution for iOS and Android"
-            ]
-        },
-        {
-            role: "Web Developer",
-            company: "Jadara Foundation",
-            period: "2023",
-            achievements: [
-                "Created platform connecting NGOs across Africa",
-                "Implemented multi-language support for international reach",
-                "Built scalable architecture supporting multiple organizations"
-            ]
-        }
-    ]
+
     return (
         <section className="px-16 py-20">
             <div className="w-full">

@@ -8,13 +8,13 @@ export default function Layout() {
     color: "#E1E1E1"
   })
 
-  // const path = useLocation().pathname;
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: 'smooth'
-  //   });
-  // }, [path])
+  const path = useLocation().pathname;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [path])
 
   const changeTheme = () => {
     setTheme({

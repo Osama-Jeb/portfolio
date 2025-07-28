@@ -1,20 +1,8 @@
 import Title from "../../../components/Title"
+import { education } from "../../../constants/aboutInfo"
 
 export default function AboutEducation() {
-    const education = [
-        {
-            degree: "Bachelor's in Computer Science",
-            institution: "University of Technology",
-            year: "",
-            description: "Specialized in web development and software engineering"
-        },
-        {
-            degree: "Full Stack Web Development Certification",
-            institution: "Tech Academy",
-            year: "2023",
-            description: "Intensive program covering modern web technologies"
-        }
-    ]
+
 
     return (
         <section className="px-16 py-20">

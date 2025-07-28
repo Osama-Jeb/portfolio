@@ -1,13 +1,8 @@
 import Title from "../../../components/Title"
+import { interests } from "../../../constants/aboutInfo"
 
 export default function AboutInterests() {
 
-    const interests = [
-        { name: "Open Source", icon: "🚀", description: "Contributing to community projects" },
-        { name: "Photography", icon: "📸", description: "Capturing moments and landscapes" },
-        { name: "Gaming", icon: "🎮", description: "Strategy and puzzle games enthusiast" },
-        { name: "Learning", icon: "📚", description: "Always exploring new technologies" }
-    ]
     return (
         <section className="px-16 py-20">
             <div className="w-full">
