@@ -9,21 +9,19 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
     return (
         <div className="min-h-screen py-16 lg:py-24">
             <div className="px-4 sm:px-6 lg:px-8">
-                {/* Back Button */}
+                {/* back btn */}
                 <Link
                     to="/"
-                    className="mb-8 inline-flex items-center gap-2 text-alpha hover:text-alpha/80 
-                            transition-colors group"
+                    className="mb-8 inline-flex items-center gap-2 text-alpha hover:text-alpha/80 transition-colors group"
                 >
-                    <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                             d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
                     Back to Projects
                 </Link>
 
-                {/* Project Header */}
+                {/* proj header */}
                 <div className="mb-12">
                     <h1 className="text-4xl lg:text-6xl font-bold text-alpha mb-6">
                         {project.name}
@@ -33,7 +31,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             <img
                                 src={project.preview}
                                 alt={project.name}
-                                className="w-full h-64 lg:h-80 object-cover rounded-2xl"
+                                className="w-full object-cover rounded-2xl"
                             />
                         </div>
                         <div className="space-y-6">
@@ -66,7 +64,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 </div>
                             )}
 
-                            {/* Links */}
+                            {/* links */}
                             <div className="flex gap-4">
                                 {project.website && (
                                     <a
@@ -93,15 +91,14 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 </div>
 
-                {/* Tech Stack */}
+                {/* tech used */}
                 <div className="mb-12">
                     <h2 className="text-2xl font-bold text-alpha mb-6">Technologies Used</h2>
                     <div className="flex flex-wrap gap-3">
                         {project.techs.map((tech, index) => (
                             <span
                                 key={index}
-                                className={`px-4 py-2 rounded-lg text-sm font-medium bg-white/10 
-                                          transition-transform hover:scale-105`}
+                                className={`px-4 py-2 rounded-lg text-sm font-medium bg-white/10 transition-transform hover:scale-105`}
                             >
                                 {tech.name}
                             </span>
@@ -109,10 +106,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 </div>
 
-                {/* Key Features */}
+                {/* features */}
                 {project.keyFeatures && (
-                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                         <h2 className="text-2xl font-bold text-alpha mb-6">Key Features</h2>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {project.keyFeatures.map((feature, index) => (
@@ -125,12 +121,11 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 )}
 
-                {/* Challenges & Solutions */}
+                {/* challenges/solutions */}
                 {(project.challenges || project.solutions) && (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                         {project.challenges && (
-                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
+                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
                                 <h2 className="text-2xl font-bold text-alpha mb-6">Challenges</h2>
                                 <ul className="space-y-3">
                                     {project.challenges.map((challenge, index) => (
@@ -144,8 +139,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                         )}
 
                         {project.solutions && (
-                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
+                            <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
                                 <h2 className="text-2xl font-bold text-alpha mb-6">Solutions</h2>
                                 <ul className="space-y-3">
                                     {project.solutions.map((solution, index) => (
@@ -160,10 +154,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 )}
 
-                {/* Lessons Learned */}
+                {/* lessons learned */}
                 {project.lessonsLearned && (
-                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                         <h2 className="text-2xl font-bold text-alpha mb-6">Lessons Learned</h2>
                         <ul className="space-y-3">
                             {project.lessonsLearned.map((lesson, index) => (
@@ -176,10 +169,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 )}
 
-                {/* Future Improvements */}
+                {/* possible improvement */}
                 {project.futureImprovements && (
-                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 
-                                      backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                    <div className="mb-12 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                         <h2 className="text-2xl font-bold text-alpha mb-6">Future Improvements</h2>
                         <ul className="space-y-3">
                             {project.futureImprovements.map((improvement, index) => (
@@ -192,7 +184,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     </div>
                 )}
 
-                {/* Additional Images */}
+                {/* more images */}
                 {project.additionalImages && project.additionalImages.length > 0 && (
                     <div className="mb-12">
                         <h2 className="text-2xl font-bold text-alpha mb-6">Gallery</h2>
@@ -202,14 +194,14 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     key={index}
                                     src={image}
                                     alt={`${project.name} screenshot ${index + 1}`}
-                                    className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                                    className="rounded-lg hover:scale-105 transition-transform duration-300"
                                 />
                             ))}
                         </div>
                     </div>
                 )}
 
-                {/* Back to Projects Button */}
+                {/* return to home */}
                 <div className="text-center">
                     <Link
                         to="/"

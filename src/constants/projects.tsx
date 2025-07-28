@@ -1,9 +1,30 @@
-import lionsPreview from "../assets/images/projects/lionsgeek/mylions2.png"
+import lionsPreview from "../assets/images/projects/lionsgeek/lionsgeek.gif";
+import lions1 from "../assets/images/projects/lionsgeek/mylions1.png";
+import lions2 from "../assets/images/projects/lionsgeek/mylions2.png";
+import lions3 from "../assets/images/projects/lionsgeek/mylions3.png";
+
 import blogPreview from "../assets/images/projects/blog/blog.gif"
 
-import animePreview from "../assets/images/projects/animelist/anime2.png"
+import animePreview from "../assets/images/projects/animelist/anime1.png"
+import anime2 from "../assets/images/projects/animelist/anime2.png";
+import anime3 from "../assets/images/projects/animelist/anime3.png";
+import anime4 from "../assets/images/projects/animelist/anime4.png";
+import anime5 from "../assets/images/projects/animelist/anime5.png";
+
 import casaPreview from "../assets/images/projects/casatourat/casa1.png"
-import africaPreview from "../assets/images/projects/yesafrica/africa3.png"
+import casa2 from "../assets/images/projects/casatourat/casa2.png";
+import casa3 from "../assets/images/projects/casatourat/casa3.png";
+import casa4 from "../assets/images/projects/casatourat/casa4.png";
+import casa5 from "../assets/images/projects/casatourat/casa5.png";
+
+import africaPreview from "../assets/images/projects/yesafrica/africa1.png"
+import africa2 from "../assets/images/projects/yesafrica/africa2.png";
+import africa3 from "../assets/images/projects/yesafrica/africa3.png";
+import africa4 from "../assets/images/projects/yesafrica/africa4.png";
+
+import herPreview from "../assets/images/projects/herday/her1.png";
+import her2 from "../assets/images/projects/herday/her2.png";
+import her3 from "../assets/images/projects/herday/her3.png";
 
 export const proProjects: Project[] = [
     {
@@ -11,7 +32,7 @@ export const proProjects: Project[] = [
         name: 'LionsGeek Management System',
         github: '',
         website: 'https://mylionsgeek.ma/',
-        desc: "Our team embarked on this exclusive venture with the aim of efficiently handling reservations and appointments for the esteemed LionsGeek Association. Leveraging the power of FullCalendar and Breeze, we have developed a seamless system that not only allows you to create and manage reservations for private equipment but also offers a range of other useful functions",
+        desc: "Our team embarked on this exclusive venture with the aim of efficiently handling reservations and appointments for the LionsGeek Association. Leveraging the power of FullCalendar and Breeze, we have developed a seamless system that not only allows you to create and manage reservations for private equipment but also offers a range of other useful functions",
         detailedDesc: "A comprehensive management system built for LionsGeek Association to streamline their operations and improve member experience. The system handles complex scheduling, equipment reservations, and member management with an intuitive interface.",
         techs: [
             { name: 'Laravel', color: 'bg-[#ff2d20] text-white' },
@@ -22,7 +43,7 @@ export const proProjects: Project[] = [
         client: 'LionsGeek',
         clientWebsite: 'https://lionsgeek.ma/',
         preview: lionsPreview,
-        timeline: "3 months (January 2023 - March 2023)",
+        timeline: "4 months (January 2024 - April 2024)",
         challenges: [
             "Complex calendar integration with multiple booking types",
             "Real-time availability checking",
@@ -30,7 +51,7 @@ export const proProjects: Project[] = [
         ],
         solutions: [
             "Implemented FullCalendar with custom event handling",
-            "Built real-time WebSocket connections for live updates",
+            "Built student-teacher attendance system",
             "Created flexible role-based access control system"
         ],
         keyFeatures: [
@@ -46,11 +67,11 @@ export const proProjects: Project[] = [
             "Real-time application architecture"
         ],
         futureImprovements: [
-            "Mobile app development",
-            "Advanced reporting features",
-            "Integration with payment systems"
+            "Excel export for reports",
+            "Optimize performance for large datasets",
+            "UI/UX enhancements"
         ],
-        additionalImages: []
+        additionalImages: [lions1, lions2, lions3]
     },
     {
         id: 2,
@@ -67,23 +88,23 @@ export const proProjects: Project[] = [
         client: 'Casamemoire',
         clientWebsite: 'https://casamemoire.org',
         preview: casaPreview,
-        timeline: "4 months (June 2023 - September 2023)",
+        timeline: "6 months (June 2024 - December 2024)",
         challenges: [
             "Cross-platform mobile development",
             "GPS integration and location services",
-            "Offline content accessibility"
+            "Guest content accessibility"
         ],
         solutions: [
             "Used Expo for streamlined development workflow",
-            "Implemented efficient caching for offline mode",
+            "Implemented layout and routes for users and gusts",
             "Created responsive design for various screen sizes"
         ],
         keyFeatures: [
             "Interactive historical tours",
             "GPS-based location services",
-            "Offline content access",
             "Multilingual support",
-            "Rich media content display"
+            "Rich media content display",
+            "Push notifications"
         ],
         lessonsLearned: [
             "Mobile-first development principles",
@@ -91,11 +112,11 @@ export const proProjects: Project[] = [
             "Performance optimization for mobile devices"
         ],
         futureImprovements: [
-            "AR features for historical visualization",
             "Social sharing capabilities",
-            "User-generated content features"
+            "User-generated content features",
+
         ],
-        additionalImages: []
+        additionalImages: [casa2, casa3, casa4, casa5]
     },
     {
         id: 3,
@@ -112,7 +133,50 @@ export const proProjects: Project[] = [
         client: 'Jadara Foundation',
         clientWebsite: 'https://jadara.foundation/',
         preview: africaPreview,
-        timeline: "5 months (August 2023 - December 2023)",
+        timeline: "2 months (January 2025 - Fabruary 2025)",
+        challenges: [
+            "Multi-language support for African countries",
+            "Complex data visualization for impact metrics",
+            "Scalable architecture for multiple NGOs"
+        ],
+        solutions: [
+            "Implemented custom component for multiple languages",
+            "Built custom dashboard with Chart.js",
+            "Created modular architecture for easy scaling"
+        ],
+        keyFeatures: [
+            "NGO directory and profiles",
+            "Program management system",
+            "Impact tracking and reporting",
+            "Multi-language support"
+        ],
+        lessonsLearned: [
+            "International web development considerations",
+            "Complex data visualization techniques",
+            "Collaborative platform architecture"
+        ],
+        futureImprovements: [
+            "Mobile application development",
+            "Advanced analytics dashboard"
+        ],
+        additionalImages: [africa2, africa3, africa4]
+    },
+    {
+        id: 4,
+        name: 'Her Day For Her',
+        github: '',
+        website: 'https://herdayforher.ma/',
+        desc: "This is the leadership initiative by the Fondation Marocaine de l’Étudiant (FME) aimed at empowering young Moroccan women scholars. The goal is to inspire and support female students through mentorship, soft skills training, and career guidance with the help of accomplished women professionals.",
+
+        detailedDesc: "A leadership development program launched by the Fondation Marocaine de l’Étudiant (FME) to equip young Moroccan women—especially scholarship recipients—with the confidence, skills, and networks needed for personal and professional success. Through MasterClasses, mentorship, and outreach events, the initiative connects students with inspiring female role models and promotes gender equality in education and careers.",
+        techs: [
+            { name: 'Inertia', color: 'bg-[#00d8ff]' },
+            { name: 'Tailwind', color: 'bg-[#30b8c7]' },
+        ],
+        client: 'Jadara Foundation',
+        clientWebsite: 'https://jadara.foundation/',
+        preview: herPreview,
+        timeline: "2 weeks (August 2025)",
         challenges: [
             "Multi-language support for African countries",
             "Complex data visualization for impact metrics",
@@ -140,7 +204,7 @@ export const proProjects: Project[] = [
             "AI-powered matching system",
             "Advanced analytics dashboard"
         ],
-        additionalImages: []
+        additionalImages: [her2, her3]
     },
 ];
 
@@ -187,7 +251,7 @@ export const persoProjects: Project[] = [
             "Social features and sharing",
             "Recommendation algorithm"
         ],
-        additionalImages: []
+        additionalImages: [anime2, anime5, anime4, anime3]
     },
     {
         id: 5,
@@ -202,7 +266,7 @@ export const persoProjects: Project[] = [
             { name: 'Firebase', color: "bg-alpha text-white" },
         ],
         preview: blogPreview,
-        timeline: "3 months (Personal project)",
+        timeline: "1 months (Personal project)",
         challenges: [
             "Real-time chat implementation",
             "File upload and storage management",
