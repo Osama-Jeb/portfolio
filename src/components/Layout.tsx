@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Navbar from '../sections/navbar'
+import Navbar from '../pages/home/sections/navbar'
 
 export default function Layout() {
   const [theme, setTheme] = useState<Theme>({
@@ -8,13 +8,13 @@ export default function Layout() {
     color: "#E1E1E1"
   })
 
-  const path = useLocation().pathname;
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Provides a smooth scrolling animation
-    });
-  }, [path])
+  // const path = useLocation().pathname;
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth'
+  //   });
+  // }, [path])
 
   const changeTheme = () => {
     setTheme({

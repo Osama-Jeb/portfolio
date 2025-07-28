@@ -1,5 +1,5 @@
 import profile from "../assets/images/profile.jpg";
-import Title from "../components/Title";
+import Title from "../../../components/Title";
 
 export default function About() {
     return (

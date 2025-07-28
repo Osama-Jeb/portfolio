@@ -10,6 +10,11 @@ type Theme = {
 type NavbarProps = {
     changeTheme: () => void,
 }
+type ProjectCardProps = {
+    index: number,
+    project: Project,
+    type: string,
+}
 
 type Skill = {
     name: string,

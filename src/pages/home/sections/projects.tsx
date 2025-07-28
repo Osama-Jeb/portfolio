@@ -1,6 +1,6 @@
-import ProjectCard from "../components/ProjectCard"
-import Title from "../components/Title"
-import { persoProjects, proProjects } from "../constants/projects"
+import ProjectCard from "../../../components/ProjectCard"
+import Title from "../../../components/Title"
+import { persoProjects, proProjects } from "../../../constants/projects"
 
 export default function Projects() {
     return (
@@ -9,22 +9,25 @@ export default function Projects() {
                 <Title title="Projects" />
 
                 <div className="mt-12 lg:mt-16 space-y-8">
-                    {/* Professional Projects */}
+                    {/* pro projects */}
                     <div className="space-y-8">
                         <h2 className="text-2xl lg:text-3xl font-bold underline mb-8">
                             Professional Projects
                         </h2>
-                        {proProjects.map((project, ind) => (
-                            <ProjectCard
-                                key={project.id}
-                                project={project}
-                                index={ind}
-                                type="pro"
-                            />
-                        ))}
+
+                        <div className="grid grid-cols-2 gap-2">
+                            {proProjects.map((project, ind) => (
+                                <ProjectCard
+                                    key={project.id}
+                                    project={project}
+                                    index={ind}
+                                    type="pro"
+                                />
+                            ))}
+                        </div>
                     </div>
 
-                    {/* Personal Projects */}
+                    {/* perso projects */}
                     <div className="space-y-8 mt-16">
                         <h2 className="text-2xl lg:text-4xl font-bold underline mb-8">
                             Personal Projects

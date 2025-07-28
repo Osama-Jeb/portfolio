@@ -1,5 +1,5 @@
-import Title from "../components/Title";
-import { trusted } from "../constants/trusted";
+import Title from "../../../components/Title";
+import { trusted } from "../../../constants/trusted";
 
 export default function Trusted() {
 

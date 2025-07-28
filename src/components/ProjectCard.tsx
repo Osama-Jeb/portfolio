@@ -1,27 +1,21 @@
 
 import { Link } from 'react-router-dom'
 
-interface ProjectCardProps {
-    index: number,
-    project: Project,
-    type: string,
-}
-
 export default function ProjectCard({ project, index, type }: ProjectCardProps) {
     const reverse = index % 2 === 0
 
     return (
         <div
             className={`group mb-16 flex flex-col lg:flex-row gap-8 ${reverse ? 'lg:flex-row-reverse' : ''} 
-                       bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm 
-                       rounded-3xl p-6 lg:p-8 border border-gray-700/50 
-                       hover:border-alpha/50 transition-all duration-500 hover:shadow-2xl hover:shadow-alpha/10`}>
+                    bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm 
+                    rounded-3xl p-6 lg:p-8 border border-gray-700/50 
+                    hover:border-alpha/50 transition-all duration-500 hover:shadow-2xl hover:shadow-alpha/10`}>
 
-            {/* Project Image */}
+            {/* preview image if type is pro */}
             {type == "pro" && (
                 <div className="lg:w-1/2 relative overflow-hidden rounded-2xl">
                     <img
-                        className="transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         src={project.preview}
                         alt={project.name}
                     />
@@ -29,13 +23,13 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                 </div>
             )}
 
-            {/* Project Content */}
+            {/* project details */}
             <div className={`${type == "pro" ? "lg:w-1/2" : "w-full"} flex flex-col justify-center space-y-6`}>
                 <div className="space-y-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-alpha group-hover:text-alpha/80 transition-colors">
                         {project.name}
                     </h3>
-                    
+
                     <p className="text-gray-300 leading-relaxed text-sm lg:text-base">
                         {project.desc}
                     </p>
@@ -60,9 +54,9 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                                 href={project.website}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-alpha hover:text-alpha/80 transition-colors font-medium"
+                                className="px-4 bg-[#E1E1E1] text-black rounded-full transition-colors font-medium hover:scale-110"
                             >
-                                Live Demo →
+                                Live Website →
                             </a>
                         )}
                         {project.github && (
@@ -70,20 +64,20 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-gray-300 transition-colors font-medium"
+                                className="px-4 bg-black text-white rounded-full transition-colors font-medium hover:scale-110"
                             >
                                 GitHub →
                             </a>
                         )}
                     </div>
 
-                    {/* View Details Button */}
+                    {/* project details page */}
                     <Link
                         to={`/project/${project.id}`}
                         className="inline-block w-full mt-4 
-                                  border bg-gradient-to-r px-4 py-3 rounded-xl text-center
-                                 font-medium from-alpha/30 to-alpha/20 border-alpha/50 transition-all duration-300 
-                                 hover:shadow-lg hover:shadow-alpha/10 hover:from-alpha/40 hover:to-alpha/30"
+                                border bg-gradient-to-r px-4 py-3 rounded-xl text-center
+                                font-medium from-alpha/30 to-alpha/20 border-alpha/50 transition-all duration-300 
+                                hover:shadow-lg hover:shadow-alpha/10 hover:from-alpha/40 hover:to-alpha/30"
                     >
                         View Project Details
                     </Link>

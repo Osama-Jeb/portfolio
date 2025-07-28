@@ -1,6 +1,6 @@
-import Skill from "../components/SkillCard";
-import Title from "../components/Title";
-import { languages, frameworks, others } from "../constants/skills";
+import Skill from "../../../components/SkillCard";
+import Title from "../../../components/Title";
+import { languages, frameworks, others } from "../../../constants/skills";
 
 export default function Skills() {
 
