@@ -32,22 +32,32 @@ type Tech = {
     color: string,
 }
 
+type LocalizedString = {
+    en: string;
+    fr: string;
+};
+
+type LocalizedArrayItem = {
+    en: string;
+    fr: string;
+};
+
 type Project = {
     id: number,
     name: string,
     github?: string,
     website: string,
-    desc: string,
-    detailedDesc?: string,
+    desc: LocalizedString;
+    detailedDesc: LocalizedString;
     techs: Tech[],
     client?: string,
     clientWebsite?: string,
     preview: string,
-    timeline?: string,
-    challenges?: string[],
-    solutions?: string[],
-    keyFeatures?: string[],
-    lessonsLearned?: string[],
-    futureImprovements?: string[],
+    timeline: LocalizedString;
+    challenges: LocalizedArrayItem[];
+    solutions: LocalizedArrayItem[];
+    keyFeatures: LocalizedArrayItem[];
+    lessonsLearned: LocalizedArrayItem[];
+    futureImprovements: LocalizedArrayItem[];
     additionalImages?: string[],
 }

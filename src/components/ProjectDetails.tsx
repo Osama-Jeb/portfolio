@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom'
+import {TransText} from "../components/"
 
 interface ProjectDetailsProps {
     project: Project
