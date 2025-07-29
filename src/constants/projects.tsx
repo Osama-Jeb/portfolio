@@ -26,6 +26,18 @@ import herPreview from "../assets/images/projects/herday/her1.png";
 import her2 from "../assets/images/projects/herday/her2.png";
 import her3 from "../assets/images/projects/herday/her3.png";
 
+import moocPreview from "../assets/images/projects/mooc/mooc1.png";
+import mooc2 from "../assets/images/projects/mooc/mooc2.png";
+import mooc3 from "../assets/images/projects/mooc/mooc3.png";
+import mooc4 from "../assets/images/projects/mooc/mooc4.png";
+import mooc5 from "../assets/images/projects/mooc/mooc5.png";
+
+import yesmobilePreview from "../assets/images/projects/yesmobile/yesmobile1.png";
+import yesmobile2 from "../assets/images/projects/yesmobile/yesmobile2.png";
+import yesmobile3 from "../assets/images/projects/yesmobile/yesmobile3.png";
+import yesmobile4 from "../assets/images/projects/yesmobile/yesmobile4.png";
+import yesmobile5 from "../assets/images/projects/yesmobile/yesmobile5.png";
+
 export const proProjects: Project[] = [
     {
         id: 1,
@@ -206,6 +218,97 @@ export const proProjects: Project[] = [
         ],
         additionalImages: [her2, her3]
     },
+    {
+        id: 5,
+        name: 'MOOC Platform',
+        github: '',
+        website: '',
+        desc: "A comprehensive Massive Open Online Course (MOOC) platform designed to provide accessible education to learners worldwide. This platform features course management, student enrollment, progress tracking, and interactive learning modules with a modern, user-friendly interface.",
+        detailedDesc: "An advanced educational platform that democratizes access to quality education through online courses. The platform supports multiple learning formats, assessment tools, and provides detailed analytics for both instructors and students.",
+        techs: [
+            { name: 'Laravel', color: 'bg-[#ff2d20] text-white' },
+            { name: 'Vue.js', color: 'bg-[#4FC08D] text-white' },
+            { name: 'MySQL', color: 'bg-[#4479A1] text-white' },
+            { name: 'Tailwind', color: 'bg-[#30b8c7]' },
+        ],
+        client: 'Educational Institution',
+        preview: moocPreview,
+        timeline: "6 months (Development project)",
+        challenges: [
+            "Scalable video streaming and content delivery",
+            "Complex user role management (students, instructors, admins)",
+            "Real-time progress tracking and analytics"
+        ],
+        solutions: [
+            "Implemented efficient video streaming with adaptive quality",
+            "Built comprehensive role-based access control system",
+            "Created detailed analytics dashboard with real-time updates"
+        ],
+        keyFeatures: [
+            "Course creation and management tools",
+            "Video streaming and content delivery",
+            "Student progress tracking",
+            "Interactive quizzes and assessments",
+            "Discussion forums and community features",
+            "Certificate generation system"
+        ],
+        lessonsLearned: [
+            "Large-scale application architecture",
+            "Video streaming optimization",
+            "Educational technology best practices"
+        ],
+        futureImprovements: [
+            "Mobile application development",
+            "AI-powered personalized learning paths",
+            "Advanced analytics and reporting"
+        ],
+        additionalImages: [mooc2, mooc3, mooc4, mooc5]
+    },
+    {
+        id: 6,
+        name: 'YES Mobile App',
+        github: 'https://github.com/Osama-Jeb/yesmobile',
+        website: '',
+        desc: "The mobile companion app for the YES Africa platform, built with React Native. This app extends the reach of the youth empowerment initiative by providing mobile access to NGO resources, program information, and community features for young people across African countries.",
+        detailedDesc: "A mobile application that brings the YES Africa platform to smartphones, making youth empowerment resources more accessible across the continent. Features offline capabilities, push notifications, and location-based services to connect young people with nearby opportunities.",
+        techs: [
+            { name: 'React Native', color: 'bg-[#00d8ff]' },
+            { name: 'Expo', color: 'bg-white text-black' },
+            { name: 'Firebase', color: "bg-alpha text-white" },
+            { name: 'Redux', color: 'bg-[#764ABC] text-white' },
+        ],
+        preview: yesmobilePreview,
+        timeline: "3 months (Personal project)",
+        challenges: [
+            "Cross-platform mobile development for diverse African markets",
+            "Offline functionality for areas with limited connectivity",
+            "Multi-language support for various African languages"
+        ],
+        solutions: [
+            "Used React Native with Expo for efficient cross-platform development",
+            "Implemented offline-first architecture with local data caching",
+            "Created flexible internationalization system"
+        ],
+        keyFeatures: [
+            "NGO directory with location-based search",
+            "Program enrollment and tracking",
+            "Offline content access",
+            "Push notifications for opportunities",
+            "Multi-language support",
+            "Community messaging features"
+        ],
+        lessonsLearned: [
+            "Mobile-first development for emerging markets",
+            "Offline-first application architecture",
+            "Cross-cultural mobile UX design"
+        ],
+        futureImprovements: [
+            "Voice interface for accessibility",
+            "AI-powered opportunity matching",
+            "Blockchain-based achievement verification"
+        ],
+        additionalImages: [yesmobile2, yesmobile3, yesmobile4, yesmobile5]
+    },
 ];
 
 export const persoProjects: Project[] = [
@@ -296,4 +399,5 @@ export const persoProjects: Project[] = [
         ],
         additionalImages: []
     },
+
 ];

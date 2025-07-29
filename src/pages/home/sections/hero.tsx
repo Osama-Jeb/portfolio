@@ -27,7 +27,7 @@ export default function Hero() {
                         <a
                             href="#projects"
                             className="bg-alpha text-white px-8 py-4 rounded-2xl font-semibold 
-                                hover:bg-transparent border-2 border-alpha transition-all duration-300 hover:scale-105 
+                                border-2 border-alpha transition-all duration-300 hover:scale-105 
                                 inline-flex items-center gap-2 group"
                         >
                             View My Work
@@ -38,7 +38,7 @@ export default function Hero() {
 
                         <a
                             href="#contact"
-                            className="bg-transparent text-alpha border-2 border-alpha hover:bg-alpha hover:text-white 
+                            className="bg-transparent text-alpha border-2 border-alpha   
                                 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 
                                 inline-flex items-center gap-2"
                         >

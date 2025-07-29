@@ -2,6 +2,11 @@ type TitleProps = {
     title: string
 }
 
+type IconProps = {
+    className?: string;
+    size?: number;
+}
+
 type Theme = {
     backgroundColor: string,
     color: string,
