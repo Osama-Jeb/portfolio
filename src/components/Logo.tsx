@@ -1,7 +1,7 @@
 export default function Logo() {
     return (
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="50px" height="50px" viewBox="0 0 256 227" className="text-alpha"
+            width="40" height="40" viewBox="0 0 256 227" className="text-alpha"
             preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0,227) scale(0.1,-0.1)"
                 fill="currentColor" stroke="none">

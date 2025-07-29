@@ -70,8 +70,8 @@ export default function Contact() {
                                 socials.map((soc, ind) => (
 
                                     <motion.div
-                                    key={ind}
-                                        className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
+                                        key={ind}
+                                        className="flex  justify-center gap-4 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
                                         variants={itemVariants}
                                         whileHover={{
                                             scale: 1.05,
@@ -79,17 +79,17 @@ export default function Contact() {
                                             transition: { duration: 0.3 }
                                         }}
                                     >
-                                        <div className="w-16 h-16 bg-alpha/20 rounded-full flex items-center justify-center">
-                                            {soc.icon}
-                                        </div>
-                                        <div className="text-center">
-                                            <p className="text-gray-400 text-sm mb-2">{soc.name}</p>
-                                            <a href={soc.link}
-                                                target="_blank" rel="noopener noreferrer"
-                                                className="text-white hover:text-alpha transition-colors font-medium">
-                                                {soc.label}
-                                            </a>
-                                        </div>
+                                        <a href={soc.link}
+                                            target="_blank" rel="noopener noreferrer"
+                                            className="text-white hover:text-alpha transition-colors font-medium flex flex-col items-center gap-2">
+                                            <div className="w-16 h-16 bg-alpha/20 rounded-full flex items-center justify-center">
+                                                {soc.icon}
+                                            </div>
+                                            <div className="text-center">
+                                                <p className="text-gray-400 text-sm mb-2">{soc.name}</p>
+                                                <p className="text-lg">{soc.label}</p>
+                                            </div>
+                                        </a>
                                     </motion.div>
                                 ))
                             }

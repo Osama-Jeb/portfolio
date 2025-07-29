@@ -32,7 +32,7 @@ export default function Projects() {
                         <h2 className="text-2xl lg:text-4xl font-bold underline mb-8">
                             Personal Projects
                         </h2>
-                        <div className="grid grid-cols-2 gap-2">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                             {persoProjects.map((project, ind) => (
                                 <ProjectCard
                                     key={project.id}
