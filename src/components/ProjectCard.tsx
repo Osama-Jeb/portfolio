@@ -1,5 +1,6 @@
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { TransText } from './TransText';
 
 export default function ProjectCard({ project, index, type }: ProjectCardProps) {
     const reverse = index % 2 === 0
@@ -31,7 +32,7 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                     </h3>
 
                     <p className="text-gray-300 leading-relaxed text-sm lg:text-base">
-                        {project.desc}
+                        <TransText {...project.desc} />
                     </p>
 
                     {/* Tech Stack */}

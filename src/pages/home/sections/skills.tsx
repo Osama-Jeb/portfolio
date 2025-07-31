@@ -23,7 +23,7 @@ export default function Skills() {
                                 <div
                                     className="flex items-center gap-3 flex-wrap">
                                     {category.skills.map((skill, i) => (
-                                        <Skill skill={skill} index={i} />
+                                        <Skill skill={skill} key={i}/>
                                     ))}
                                 </div>
                             </div>

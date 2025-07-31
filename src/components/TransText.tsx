@@ -1,5 +1,5 @@
-// import { useAppContext } from "@/context/appContext";
 import React from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface TextProps {
     fr: string;
@@ -7,8 +7,7 @@ interface TextProps {
 }
 
 export const TransText: React.FC<TextProps> = (props) => {
-    // const {selectedLanguage} = useAppContext();
-    const selectedLanguage = "en";
+    const { selectedLanguage } = useLanguage();
 
     return props[selectedLanguage as keyof TextProps];
 };

@@ -3,12 +3,15 @@ import { useState } from "react"
 import Logo from "../../../components/Logo"
 import { useScroll } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion"
-import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon, HamburgerIcon } from "../../../components/icons"
+import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon, HamburgerIcon, EnglishFlagIcon, FrenchFlagIcon } from "../../../components/icons"
+import { useLanguage } from "../../../contexts/LanguageContext"
+import { TransText } from "../../../components/TransText"
 
 export default function Navbar({ changeTheme }: NavbarProps) {
     const { scrollYProgress } = useScroll();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDarkTheme, setIsDarkTheme] = useState(true);
+    const { selectedLanguage, toggleLanguage } = useLanguage();
 
 
     const handleThemeChange = () => {
@@ -17,9 +20,18 @@ export default function Navbar({ changeTheme }: NavbarProps) {
     };
 
     const navLinks = [
-        { to: "/", label: "Home" },
-        { to: "/about", label: "About Me" },
-        { to: "/projects", label: "Projects" },
+        {
+            to: "/",
+            label: <TransText en="Home" fr="Accueil" />
+        },
+        {
+            to: "/about",
+            label: <TransText en="About Me" fr="À Propos" />
+        },
+        {
+            to: "/projects",
+            label: <TransText en="Projects" fr="Projets" />
+        },
     ];
 
     const socialLinks = [
@@ -88,6 +100,39 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                             </a>
                         </motion.div>
                     ))}
+
+                    {/* Language Toggle */}
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-2 rounded-full bg-alpha/10 hover:bg-alpha/20 transition-colors duration-300"
+                        onClick={toggleLanguage}
+                        aria-label="Toggle language"
+                    >
+                        <AnimatePresence mode="wait">
+                            {selectedLanguage !== 'en' ? (
+                                <motion.div
+                                    key="french"
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    exit={{ scale: 0.8, opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <FrenchFlagIcon className="text-alpha" size={20} />
+                                </motion.div>
+                            ) : (
+                                <motion.div
+                                    key="english"
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    exit={{ scale: 0.8, opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <EnglishFlagIcon className="text-alpha" size={20} />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </motion.button>
 
                     {/* Theme Toggle */}
                     <motion.button
@@ -184,6 +229,39 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                                         <social.icon size={24} />
                                     </motion.a>
                                 ))}
+
+                                {/* Mobile Language Toggle */}
+                                <motion.button
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="p-2 rounded-full bg-alpha/10 hover:bg-alpha/20 transition-colors duration-300"
+                                    onClick={toggleLanguage}
+                                    aria-label="Toggle language"
+                                >
+                                    <AnimatePresence mode="wait">
+                                        {selectedLanguage === 'en' ? (
+                                            <motion.div
+                                                key="french-mobile"
+                                                initial={{ scale: 0.8, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.8, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <FrenchFlagIcon className="text-alpha" size={24} />
+                                            </motion.div>
+                                        ) : (
+                                            <motion.div
+                                                key="english-mobile"
+                                                initial={{ scale: 0.8, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                exit={{ scale: 0.8, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <EnglishFlagIcon className="text-alpha" size={24} />
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.button>
 
                                 {/* Mobile Theme Toggle */}
                                 <motion.button

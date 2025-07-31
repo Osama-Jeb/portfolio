@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-import {TransText} from "../components/"
+import { TransText } from "./TransText"
 
 interface ProjectDetailsProps {
     project: Project
@@ -37,13 +37,16 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                         </div>
                         <div className="space-y-6">
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                {project.detailedDesc || project.desc}
+                                <TransText {...project.desc} />
+                                {/* todo: detailed desc */}
                             </p>
 
                             {project.timeline && (
                                 <div>
                                     <h3 className="text-lg font-semibold text-alpha mb-2">Timeline</h3>
-                                    <p className="text-gray-300">{project.timeline}</p>
+                                    <p className="text-gray-300">
+                                        <TransText {...project.timeline} />
+                                    </p>
                                 </div>
                             )}
 
@@ -65,7 +68,6 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 </div>
                             )}
 
-                            {/* links */}
                             <div className="flex gap-4">
                                 {project.website && (
                                     <a
@@ -115,7 +117,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.keyFeatures.map((feature, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-alpha mt-1">•</span>
-                                    <span className="text-gray-300">{feature}</span>
+                                    <span className="text-gray-300">
+                                        <TransText {...feature} />
+                                    </span>
                                 </li>
                             ))}
                         </ul>
@@ -132,7 +136,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     {project.challenges.map((challenge, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <span className="text-red-400 mt-1">⚠</span>
-                                            <span className="text-gray-300">{challenge}</span>
+                                            <span className="text-gray-300">
+                                                <TransText {...challenge} />
+                                            </span>
                                         </li>
                                     ))}
                                 </ul>
@@ -146,7 +152,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     {project.solutions.map((solution, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <span className="text-green-400 mt-1">✓</span>
-                                            <span className="text-gray-300">{solution}</span>
+                                            <span className="text-gray-300">
+                                                <TransText {...solution} />
+                                            </span>
                                         </li>
                                     ))}
                                 </ul>
@@ -163,7 +171,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.lessonsLearned.map((lesson, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-blue-400 mt-1">💡</span>
-                                    <span className="text-gray-300">{lesson}</span>
+                                    <span className="text-gray-300">
+                                        <TransText {...lesson} />
+                                    </span>
                                 </li>
                             ))}
                         </ul>
@@ -178,7 +188,9 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.futureImprovements.map((improvement, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-purple-400 mt-1">🚀</span>
-                                    <span className="text-gray-300">{improvement}</span>
+                                    <span className="text-gray-300">
+                                        <TransText {...improvement} />
+                                    </span>
                                 </li>
                             ))}
                         </ul>
