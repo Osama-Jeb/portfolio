@@ -1,17 +1,36 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import Logo from "../../../components/Logo"
-import { useScroll } from "framer-motion";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion"
 import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon, HamburgerIcon, EnglishFlagIcon, FrenchFlagIcon } from "../../../components/icons"
 import { useLanguage } from "../../../contexts/LanguageContext"
 import { TransText } from "../../../components/TransText"
 
 export default function Navbar({ changeTheme }: NavbarProps) {
-    const { scrollYProgress } = useScroll();
+    const { scrollY, scrollYProgress } = useScroll();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDarkTheme, setIsDarkTheme] = useState(true);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const { selectedLanguage, toggleLanguage } = useLanguage();
+
+    // Handle navbar visibility based on scroll direction
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const direction = latest > lastScrollY ? "down" : "up";
+        const isAtTop = latest < 10;
+
+        if (isAtTop) {
+            setIsVisible(true);
+        } else if (direction === "down" && latest > 100) {
+            setIsVisible(false);
+            setIsMenuOpen(false); // Close mobile menu when hiding navbar
+        } else if (direction === "up") {
+            setIsVisible(true);
+        }
+
+        setLastScrollY(latest);
+    });
 
 
     const handleThemeChange = () => {
@@ -48,7 +67,18 @@ export default function Navbar({ changeTheme }: NavbarProps) {
     ];
 
     return (
-        <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/20 border-b border-gray-800">
+        <motion.nav
+            className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-gray-800"
+            initial={{ y: 0 }}
+            animate={{
+                y: isVisible ? 0 : -100,
+                opacity: isVisible ? 1 : 0
+            }}
+            transition={{
+                duration: 0.3,
+                ease: "easeInOut"
+            }}
+        >
             <div className="flex items-center justify-between px-4 sm:px-6 lg:px-16 py-4">
                 {/* Logo */}
                 <motion.div
@@ -306,6 +336,6 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                 style={{ scaleX: scrollYProgress }}
                 className="bg-alpha z-50 fixed bottom-0 left-0 h-[0.5vh] w-full">
             </motion.div>
-        </nav>
+        </motion.nav>
     )
 }

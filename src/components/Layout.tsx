@@ -36,8 +36,11 @@ export default function Layout() {
       <Navbar
         changeTheme={changeTheme}
       />
-      
-      <Outlet />
+
+      {/* Add top padding to account for fixed navbar */}
+      <div className="pt-20">
+        <Outlet />
+      </div>
     </div>
   )
 }
