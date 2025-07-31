@@ -7,7 +7,7 @@ import AboutInterests from './sections/aboutInterests'
 export default function About() {
 
   return (
-    <div>
+    <>
       {/* hero section */}
       <AboutHero />
 
@@ -19,6 +19,6 @@ export default function About() {
 
       {/* Personal Interests */}
       <AboutInterests />
-    </div>
+    </>
   )
 }

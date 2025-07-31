@@ -368,7 +368,7 @@ export const proProjects: Project[] = [
 
 export const persoProjects: Project[] = [
     {
-        id: 4,
+        id: 7,
         name: 'Anime Repo',
         github: 'https://github.com/Osama-Jeb/animelist',
         website: 'https://animelist-blue.vercel.app/',
@@ -472,7 +472,7 @@ export const persoProjects: Project[] = [
         additionalImages: [anime2, anime5, anime4, anime3]
     },
     {
-        id: 5,
+        id: 8,
         name: 'Blog & Chat',
         github: 'https://github.com/Osama-Jeb/Blog',
         website: 'https://myblogproject.vercel.app/',

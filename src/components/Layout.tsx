@@ -8,6 +8,7 @@ export default function Layout() {
     color: "#E1E1E1"
   })
 
+  // to scroll to the top of the screen when navigation between pages
   const path = useLocation().pathname;
   useEffect(() => {
     window.scrollTo({
@@ -16,6 +17,7 @@ export default function Layout() {
     });
   }, [path])
 
+  // theme colors
   const changeTheme = () => {
     setTheme({
       backgroundColor: theme.backgroundColor == "#050505" ? "#000000" : "#050505",
@@ -34,9 +36,8 @@ export default function Layout() {
       <Navbar
         changeTheme={changeTheme}
       />
-      <div className="relative z-10 ">
-        <Outlet />
-      </div>
+      
+      <Outlet />
     </div>
   )
 }

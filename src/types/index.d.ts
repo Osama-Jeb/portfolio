@@ -1,5 +1,5 @@
 type TitleProps = {
-    title: string
+    title: string | React.ReactNode
 }
 
 type IconProps = {
@@ -37,10 +37,6 @@ type LocalizedString = {
     fr: string;
 };
 
-type LocalizedArrayItem = {
-    en: string;
-    fr: string;
-};
 
 type Project = {
     id: number,
@@ -54,10 +50,47 @@ type Project = {
     clientWebsite?: string,
     preview: string,
     timeline: LocalizedString;
-    challenges: LocalizedArrayItem[];
-    solutions: LocalizedArrayItem[];
-    keyFeatures: LocalizedArrayItem[];
-    lessonsLearned: LocalizedArrayItem[];
-    futureImprovements: LocalizedArrayItem[];
+    challenges: LocalizedString[];
+    solutions: LocalizedString[];
+    keyFeatures: LocalizedString[];
+    lessonsLearned: LocalizedString[];
+    futureImprovements: LocalizedString[];
     additionalImages?: string[],
+}
+
+type Education = {
+    degree: LocalizedString;
+    institution: string;
+    year?: string;
+    description: LocalizedString;
+}
+
+type EducationCardProps = {
+    education: Education
+}
+
+type Experience = {
+    role: LocalizedString;
+    company: string;
+    period: string;
+    achievements: LocalizedString[];
+}
+
+type ExperienceCardProps = {
+    experience: Experience
+}
+
+
+type Interest = {
+    name: LocalizedString;
+    icon: string;
+    description: LocalizedString
+}
+
+type InterestCardProp = {
+    interest: Interest
+}
+
+type SkillProp = {
+    skill: Skill
 }

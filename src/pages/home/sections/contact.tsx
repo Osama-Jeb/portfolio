@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Title from '../../../components/Title'
 import { socials } from '../../../constants/socials'
+import { TransText } from '../../../components/TransText'
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,7 +37,7 @@ export default function Contact() {
             variants={containerVariants}
         >
             <div className="px-4 sm:px-6 lg:px-8">
-                <Title title="Get In Touch" />
+                <Title title={<TransText en="Get In Touch" fr="Contactez-Moi" />} />
 
                 <div className="mt-12 lg:mt-16 max-w-4xl mx-auto">
                     {/* Centered Contact Content */}
@@ -46,11 +47,16 @@ export default function Contact() {
                     >
                         <motion.div variants={itemVariants}>
                             <h3 className="text-2xl lg:text-3xl font-bold text-alpha mb-6">
-                                Let's Work Together
+                                <TransText
+                                    en="Let's Work Together"
+                                    fr="Travaillons Ensemble"
+                                />
                             </h3>
                             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-                                I'm always interested in new opportunities and exciting projects.
-                                Whether you have a question or just want to say hi, feel free to reach out!
+                                <TransText
+                                    en="I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!"
+                                    fr="Je suis toujours intéressé par de nouvelles opportunités et des projets passionnants. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, n'hésitez pas à me contacter !"
+                                />
                             </p>
                         </motion.div>
 

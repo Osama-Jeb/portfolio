@@ -40,15 +40,14 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                         {project.techs.map((tech, techIndex) => (
                             <span
                                 key={techIndex}
-                                className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color} 
-                                          transition-transform hover:scale-105`}
+                                className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color} transition-transform hover:scale-105`}
                             >
                                 {tech.name}
                             </span>
                         ))}
                     </div>
 
-                    {/* Links */}
+                    {/* links */}
                     <div className="flex gap-4 pt-2">
                         {project.website && (
                             <a
