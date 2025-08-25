@@ -53,9 +53,9 @@ export const proProjects: Project[] = [
             fr: "Un système de gestion complet conçu pour l’Association LionsGeek afin de simplifier leurs opérations et améliorer l’expérience des membres. Le système gère la planification complexe, les réservations de matériel et la gestion des membres via une interface intuitive."
         },
         techs: [
-            { name: 'Laravel', color: 'bg-[#ff2d20] text-white' },
-            { name: 'Breeze Auth', color: 'bg-[#8a94a6] text-gray-500' },
-            { name: 'FullCalendar', color: "bg-[#2b5ea4] text-white" },
+            { name: 'Laravel', color: 'bg-[#ff2d20]' },
+            { name: 'Breeze Auth', color: 'bg-[#8a94a6]' },
+            { name: 'FullCalendar', color: 'bg-[#2b5ea4]' },
             { name: 'Tailwind', color: 'bg-[#30b8c7]' },
         ],
         client: 'LionsGeek',

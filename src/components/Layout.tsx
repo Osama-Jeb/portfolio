@@ -17,27 +17,26 @@ export default function Layout() {
     });
   }, [path])
 
-  // theme colors
+  // theme colors. find a better way later
   const changeTheme = () => {
     setTheme({
-      backgroundColor: theme.backgroundColor == "#050505" ? "#000000" : "#050505",
-      color: theme.color == "#E1E1E1" ? "#FFFFFF" : "#E1E1E1"
+      backgroundColor: theme.backgroundColor == "#050505" ? "#ffffff" : "#050505",
+      color: theme.color == "#E1E1E1" ? "#000000" : "#E1E1E1"
     })
   }
+
   return (
     <div
       style={{
         backgroundColor: theme.backgroundColor,
         color: theme.color
       }}
-      className={`${theme.backgroundColor == "#050505" ? '' : 'invert'}`}
     >
 
       <Navbar
         changeTheme={changeTheme}
       />
 
-      {/* Add top padding to account for fixed navbar */}
       <div className="pt-20">
         <Outlet />
       </div>

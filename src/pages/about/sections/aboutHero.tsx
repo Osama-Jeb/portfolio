@@ -18,7 +18,7 @@ export default function AboutHero() {
                             fr="Je suis un développeur web dévoué avec une passion pour créer des solutions innovantes qui font la différence. Avec une expertise dans les technologies web modernes et une approche collaborative, je donne vie aux idées grâce à un code propre et efficace."
                         />
                     </p>
-                    <p className="text-lg text-gray-300">
+                    <p className="text-lg">
                         <TransText
                             en="When I'm not coding, you'll find me exploring new technologies and contributing to open source projects."
                             fr="Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies et de contribuer à des projets open source."

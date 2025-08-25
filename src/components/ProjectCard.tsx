@@ -8,9 +8,9 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
     return (
         <div
             className={`group mb-16 flex flex-col lg:flex-row gap-8 ${reverse ? 'lg:flex-row-reverse' : ''} 
-                    bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm
-                    rounded-3xl p-6 lg:p-8 border border-gray-700/50 
-                    hover:border-alpha/50 transition-all duration-500 hover:shadow-2xl hover:shadow-alpha/10`}>
+                    bg-gray-900/50  backdrop-blur-sm
+                    rounded-t-3xl p-6 lg:p-8 border border-gray-700/50 group
+                    hover:border-alpha/50 transition-all duration-500 relative`}>
 
             {/* preview image if type is pro */}
             {type == "pro" && (
@@ -31,7 +31,7 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                         {project.name}
                     </h3>
 
-                    <p className="text-gray-300 leading-relaxed text-sm lg:text-base">
+                    <p className="leading-relaxed text-sm lg:text-base">
                         <TransText {...project.desc} />
                     </p>
 
@@ -83,6 +83,8 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
                     </Link>
                 </div>
             </div>
+
+            <div className='bg-alpha h-1 w-0 group-hover:w-full transition-all duration-500 absolute bottom-0 left-0'></div>
         </div>
     )
 }

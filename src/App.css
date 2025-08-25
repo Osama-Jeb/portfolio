@@ -1,6 +1,6 @@
 * {
     font-family: monospace;
-    /* transition: background-color 0.5s ease, color 0.5s ease !important; */
+    scroll-behavior: smooth;
 }
 
 section {

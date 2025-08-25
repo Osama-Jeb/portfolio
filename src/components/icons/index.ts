@@ -1,3 +1,5 @@
+// so I can import them easily
+
 export { default as LinkedInIcon } from './LinkedInIcon';
 export { default as GitHubIcon } from './GitHubIcon';
 export { default as SunIcon } from './SunIcon';

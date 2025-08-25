@@ -29,7 +29,7 @@ export default function ProjectPage() {
           <h1 className="text-4xl font-bold text-alpha mb-4">
             <TransText en="Project Not Found" fr="Projet Introuvable" />
           </h1>
-          <p className="text-gray-300 mb-8">
+          <p className="mb-8">
             <TransText
               en="The project you're looking for doesn't exist."
               fr="Le projet que vous recherchez n'existe pas."

@@ -36,7 +36,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             />
                         </div>
                         <div className="space-y-6">
-                            <p className="text-xl text-gray-300 leading-relaxed">
+                            <p className="text-xl  leading-relaxed">
                                 <TransText {...project.desc} />
                                 <br />
                                 <TransText {...project.detailedDesc} />
@@ -48,7 +48,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     <h3 className="text-lg font-semibold text-alpha mb-2">
                                         <TransText en="Timeline" fr="Chronologie" />
                                     </h3>
-                                    <p className="text-gray-300">
+                                    <p className="">
                                         <TransText {...project.timeline} />
                                     </p>
                                 </div>
@@ -64,12 +64,12 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                             href={project.clientWebsite}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-gray-300 hover:text-alpha transition-colors"
+                                            className=" hover:text-alpha transition-colors"
                                         >
                                             {project.client} →
                                         </a>
                                     ) : (
-                                        <p className="text-gray-300">{project.client}</p>
+                                        <p className="">{project.client}</p>
                                     )}
                                 </div>
                             )}
@@ -90,7 +90,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:border-alpha hover:text-alpha transition-colors font-medium"
+                                        className="px-6 py-3 border border-gray-600  rounded-lg hover:border-alpha hover:text-alpha transition-colors font-medium"
                                     >
                                         GitHub
                                     </a>
@@ -127,7 +127,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.keyFeatures.map((feature, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-alpha mt-1">•</span>
-                                    <span className="text-gray-300">
+                                    <span className="">
                                         <TransText {...feature} />
                                     </span>
                                 </li>
@@ -148,7 +148,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     {project.challenges.map((challenge, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <span className="text-red-400 mt-1">⚠</span>
-                                            <span className="text-gray-300">
+                                            <span className="">
                                                 <TransText {...challenge} />
                                             </span>
                                         </li>
@@ -166,7 +166,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                     {project.solutions.map((solution, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <span className="text-green-400 mt-1">✓</span>
-                                            <span className="text-gray-300">
+                                            <span className="">
                                                 <TransText {...solution} />
                                             </span>
                                         </li>
@@ -187,7 +187,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.lessonsLearned.map((lesson, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-blue-400 mt-1">💡</span>
-                                    <span className="text-gray-300">
+                                    <span className="">
                                         <TransText {...lesson} />
                                     </span>
                                 </li>
@@ -206,7 +206,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             {project.futureImprovements.map((improvement, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <span className="text-purple-400 mt-1">🚀</span>
-                                    <span className="text-gray-300">
+                                    <span className="">
                                         <TransText {...improvement} />
                                     </span>
                                 </li>

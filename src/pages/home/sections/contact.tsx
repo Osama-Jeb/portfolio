@@ -52,7 +52,7 @@ export default function Contact() {
                                     fr="Travaillons Ensemble"
                                 />
                             </h3>
-                            <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
+                            <p className="text text-lg leading-relaxed max-w-2xl mx-auto">
                                 <TransText
                                     en="I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!"
                                     fr="Je suis toujours intéressé par de nouvelles opportunités et des projets passionnants. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, n'hésitez pas à me contacter !"
@@ -77,7 +77,7 @@ export default function Contact() {
 
                                     <motion.div
                                         key={ind}
-                                        className="flex  justify-center gap-4 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
+                                        className="flex  justify-center gap-4 p-6 bg-[#1f1f1f] rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
                                         variants={itemVariants}
                                         whileHover={{
                                             scale: 1.05,
@@ -92,7 +92,7 @@ export default function Contact() {
                                                 {soc.icon}
                                             </div>
                                             <div className="text-center">
-                                                <p className="text-gray-400 text-sm mb-2">{soc.name}</p>
+                                                <p className=" text-sm mb-2">{soc.name}</p>
                                                 <p className="text-lg">{soc.label}</p>
                                             </div>
                                         </a>
