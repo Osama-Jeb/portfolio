@@ -25,8 +25,9 @@ const itemVariants = {
 };
 
 export default function Hero() {
+    
     return (
-        <section className="min-h-[90vh] relative" id="hero">
+        <section className="min-h-[90vh] relative overflow-hidden" id="hero">
 
             <motion.div
                 className="flex items-center justify-around w-full"

@@ -3,7 +3,7 @@ import { TransText } from "./TransText";
 export default function EducationCard({ education }: EducationCardProps) {
     
     return (
-        <div className="bg-[#1F1F1F] rounded-xl p-6 hover:bg-[#2A2A2A] transition-colors">
+        <div className="bg-[#1F1F1F] rounded-xl p-6 z-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <h3 className="text-2xl font-bold text-alpha">
                     <TransText {...education.degree} />

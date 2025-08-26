@@ -1,7 +1,11 @@
-export default function Logo() {
+type LogoProps = {
+    size: string;
+}
+
+export default function Logo(props : LogoProps) {
     return (
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="35" height="35" viewBox="0 0 256 227" className="text-alpha"
+            width={props.size} height={props.size} viewBox="0 0 256 227" className="text-alpha"
             preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0,227) scale(0.1,-0.1)"
                 fill="currentColor" stroke="none">

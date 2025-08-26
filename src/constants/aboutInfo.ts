@@ -88,7 +88,7 @@ export const experience = [
             fr: "Développeur Web"
         },
         company: "Jadara Foundation",
-        period: "2024",
+        period: "2025",
         achievements: [
             {
                 en: "Created platform connecting NGOs across Africa",

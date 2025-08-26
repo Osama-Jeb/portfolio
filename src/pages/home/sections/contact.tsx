@@ -77,7 +77,7 @@ export default function Contact() {
 
                                     <motion.div
                                         key={ind}
-                                        className="flex  justify-center gap-4 p-6 bg-[#1f1f1f] rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
+                                        className="flex  justify-center gap-4 p-6 bg-[#1f1f1f] z-10 rounded-3xl border border-gray-700/50 hover:border-alpha/50 transition-all duration-300"
                                         variants={itemVariants}
                                         whileHover={{
                                             scale: 1.05,

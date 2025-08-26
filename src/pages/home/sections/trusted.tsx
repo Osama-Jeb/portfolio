@@ -13,7 +13,7 @@ export default function Trusted() {
 
                     {trusted.map((tru, ind) => (
                             <a key={ind} href={tru.website} target="_blank"
-                                className="flex flex-col gap-2 items-center bg-[#1F1F1F] text-white rounded p-6 cursor-pointer"
+                                className="flex flex-col gap-2 items-center bg-[#1F1F1F] z-10 text-white rounded p-6 cursor-pointer"
                             >
                                 <img src={tru.image}
                                     className="w-[150px] h-[140px] object-cover"

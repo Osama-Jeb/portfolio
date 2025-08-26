@@ -3,7 +3,7 @@ import { TransText } from "../../../components/TransText"
 
 export default function AboutHero() {
     return (
-        <section className="px-16 py-20">
+        <section className="px-16 py-20 relative">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                     <h2 className="text-5xl text-alpha font-semibold">

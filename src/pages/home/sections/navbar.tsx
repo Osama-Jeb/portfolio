@@ -58,7 +58,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                     whileTap={{ scale: 0.95 }}
                 >
                     <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                        <Logo />
+                        <Logo size="35" />
                         <p className="hidden sm:block">Oussama Jebrane</p>
                     </Link>
                 </motion.div>
