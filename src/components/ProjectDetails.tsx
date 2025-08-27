@@ -8,7 +8,7 @@ interface ProjectDetailsProps {
 
 export default function ProjectDetails({ project }: ProjectDetailsProps) {
     return (
-        <div className="min-h-screen py-16 lg:py-24">
+        <div className="min-h-screen py-16 lg:py-24 relative">
             <div className="px-4 sm:px-6 lg:px-8">
                 {/* back btn */}
                 <Link
@@ -40,7 +40,6 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 <TransText {...project.desc} />
                                 <br />
                                 <TransText {...project.detailedDesc} />
-                                {/* todo: detailed desc */}
                             </p>
 
                             {project.timeline && (

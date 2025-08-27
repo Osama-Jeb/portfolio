@@ -2,40 +2,40 @@ import React, { createContext, useContext, useState, type ReactNode,  } from 're
 
 export type Language = 'en' | 'fr';
 
-interface LanguageContextType {
+interface AppContextType {
   selectedLanguage: Language;
   toggleLanguage: () => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const AppContext = createContext<AppContextType | undefined>(undefined);
 
-interface LanguageProviderProps {
+interface AppProviderProps {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [selectedLanguage, setSelectedLanguage] = useState<Language>('en');
 
   const toggleLanguage = () => {
     setSelectedLanguage(prev => prev === 'en' ? 'fr' : 'en');
   };
 
-  const value: LanguageContextType = {
+  const value: AppContextType = {
     selectedLanguage,
     toggleLanguage,
   };
 
   return (
-    <LanguageContext.Provider value={value}>
+    <AppContext.Provider value={value}>
       {children}
-    </LanguageContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useLanguage = (): LanguageContextType => {
-  const context = useContext(LanguageContext);
+export const useAppContext = (): AppContextType => {
+  const context = useContext(AppContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error('useAppContext must be used within a AppProvider');
   }
   return context;
 };

@@ -22,7 +22,7 @@ export default function Skills() {
 
 
     return (
-        <section id="skills">
+        <section id="skills" className="relative">
             <div className="w-full px-16">
                 <Title title={<TransText en="Techno-Stack" fr="Stack Technologique" />} />
                 <div className="flex items-center justify-center flex-col">

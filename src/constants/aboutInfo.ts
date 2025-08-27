@@ -1,4 +1,4 @@
-export const education = [
+export const education: Education[] = [
     {
         degree: {
             en: "Bachelor's in Chemistry",
@@ -37,13 +37,14 @@ export const education = [
     },
 ];
 
-export const experience = [
+export const experience: Experience[] = [
     {
         role: {
             en: "Full Stack Developer",
             fr: "Développeur Full Stack"
         },
         company: "LionsGeek Association",
+        website: "https://lionsgeek.ma/",
         period: "2023 - Present",
         achievements: [
             {
@@ -66,6 +67,7 @@ export const experience = [
             fr: "Développeur d'Applications Mobiles"
         },
         company: "Casa Memoire",
+        website: "https://www.casamemoire.org",
         period: "2024",
         achievements: [
             {
@@ -88,6 +90,7 @@ export const experience = [
             fr: "Développeur Web"
         },
         company: "Jadara Foundation",
+        website: "https://jadara.ngo/",
         period: "2025",
         achievements: [
             {
@@ -106,7 +109,7 @@ export const experience = [
     }
 ];
 
-export const interests = [
+export const interests: Interest[] = [
     {
         name: {
             en: "Open Source",

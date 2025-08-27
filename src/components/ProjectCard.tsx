@@ -8,7 +8,7 @@ export default function ProjectCard({ project, index, type }: ProjectCardProps) 
     return (
         <div
             className={`group mb-16 flex flex-col lg:flex-row gap-8 ${reverse ? 'lg:flex-row-reverse' : ''} 
-                    bg-gray-900/50  backdrop-blur-sm
+                    bg-gray-900/50 backdrop-blur-sm
                     rounded-t-3xl p-6 lg:p-8 border border-gray-700/50 group
                     hover:border-alpha/50 transition-all duration-500 relative`}>
 

@@ -21,8 +21,8 @@ export default function Layout() {
   // theme colors. find a better way later
   const changeTheme = () => {
     setTheme({
-      backgroundColor: theme.backgroundColor == "#050505" ? "#f1f1f1" : "#050505",
-      color: theme.color == "#E1E1E1" ? "0A0A0A" : "#E1E1E1"
+      backgroundColor: theme.backgroundColor == "#050505" ? "#f8f8f8" : "#050505",
+      color: theme.color == "#E1E1E1" ? "#0A0A0A" : "#E1E1E1"
     })
   }
 
@@ -51,6 +51,7 @@ export default function Layout() {
   return (
     <>
       {/* background squares */}
+
       <svg className="fixed inset-0 w-full h-full text-alpha/20 ">
         <defs>
           <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -60,7 +61,6 @@ export default function Layout() {
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
-
       {
         loading ? (
           // todo: add more details to the laoding screen

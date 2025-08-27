@@ -72,6 +72,7 @@ type EducationCardProps = {
 type Experience = {
     role: LocalizedString;
     company: string;
+    website: string;
     period: string;
     achievements: LocalizedString[];
 }

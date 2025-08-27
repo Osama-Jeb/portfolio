@@ -4,7 +4,7 @@ import Logo from "../../../components/Logo"
 import { useScroll } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion"
 import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon, HamburgerIcon, EnglishFlagIcon, FrenchFlagIcon } from "../../../components/icons"
-import { useLanguage } from "../../../contexts/LanguageContext"
+import { useAppContext } from "../../../contexts/AppContext"
 import { TransText } from "../../../components/TransText"
 
 export default function Navbar({ changeTheme }: NavbarProps) {
@@ -12,7 +12,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDarkTheme, setIsDarkTheme] = useState(true);
 
-    const { selectedLanguage, toggleLanguage } = useLanguage();
+    const { selectedLanguage, toggleLanguage } = useAppContext();
 
     const handleThemeChange = () => {
         changeTheme();

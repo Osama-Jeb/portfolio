@@ -4,7 +4,7 @@ import { TransText } from "../../../components/TransText";
 
 const InterestCard = ({ interest } : InterestCardProp) => {
     return (
-        <div className="bg-[#1F1F1F] z-10 text-white rounded-xl p-6">
+        <div className="bg-gray-900/50 backdrop-blur-sm z-10 text-white rounded-xl p-6">
             <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4">{interest.icon}</span>
                 <h3 className="text-2xl font-bold text-alpha">
