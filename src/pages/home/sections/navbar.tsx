@@ -7,18 +7,12 @@ import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon, HamburgerIcon, EnglishFlag
 import { useAppContext } from "../../../contexts/AppContext"
 import { TransText } from "../../../components/TransText"
 
-export default function Navbar({ changeTheme }: NavbarProps) {
-    const {scrollYProgress } = useScroll();
+export default function Navbar() {
+    const { scrollYProgress } = useScroll();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkTheme, setIsDarkTheme] = useState(true);
+    const { selectedLanguage, toggleLanguage, isDark, toggleTheme } = useAppContext();
 
-    const { selectedLanguage, toggleLanguage } = useAppContext();
-
-    const handleThemeChange = () => {
-        changeTheme();
-        setIsDarkTheme(!isDarkTheme);
-    };
-
+    
     const navLinks = [
         {
             to: "/",
@@ -48,9 +42,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
     ];
 
     return (
-        <nav
-            className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-gray-800"
-        >
+        <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-gray-800">
             <div className="flex items-center justify-between px-4 sm:px-6 lg:px-16 py-4">
                 {/* Logo */}
                 <motion.div
@@ -63,9 +55,9 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                     </Link>
                 </motion.div>
 
-                {/* Desktop Navigation */}
+                {/* desktop version */}
                 <div className="hidden md:flex items-center gap-6">
-                    {/* Navigation Links */}
+                    {/* nav links */}
                     {navLinks.map((link) => (
                         <motion.div
                             key={link.to}
@@ -84,7 +76,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                         </motion.div>
                     ))}
 
-                    {/* Social Links */}
+                    {/* social links */}
                     {socialLinks.map((social) => (
                         <motion.div
                             key={social.href}
@@ -103,7 +95,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                         </motion.div>
                     ))}
 
-                    {/* Language Toggle */}
+                    {/* language */}
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -136,16 +128,16 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                         </AnimatePresence>
                     </motion.button>
 
-                    {/* Theme Toggle */}
+                    {/* theme */}
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="p-2 rounded-full bg-alpha/10 hover:bg-alpha/20 transition-colors duration-300 cursor-pointer"
-                        onClick={handleThemeChange}
+                        onClick={toggleTheme}
                         aria-label="Toggle theme"
                     >
                         <AnimatePresence mode="wait">
-                            {!isDarkTheme ? (
+                            {isDark ? (
                                 <motion.div
                                     key="sun"
                                     initial={{ rotate: -90, opacity: 0 }}
@@ -181,7 +173,7 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                 </motion.button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* mobile version */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -270,11 +262,11 @@ export default function Navbar({ changeTheme }: NavbarProps) {
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                     className="p-2 rounded-full bg-alpha/10 hover:bg-alpha/20 transition-colors duration-300"
-                                    onClick={handleThemeChange}
+                                    onClick={toggleTheme}
                                     aria-label="Toggle theme"
                                 >
                                     <AnimatePresence mode="wait">
-                                        {isDarkTheme ? (
+                                        {isDark ? (
                                             <motion.div
                                                 key="sun-mobile"
                                                 initial={{ rotate: -90, opacity: 0 }}
